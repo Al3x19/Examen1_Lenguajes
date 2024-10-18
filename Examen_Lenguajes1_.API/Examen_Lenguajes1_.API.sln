@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen_Lenguajes1_.API", "Examen_Lenguajes1_.API\Examen_Lenguajes1_.API.csproj", "{EDC4D794-EB16-4864-A314-B3DE8284697D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDC4D794-EB16-4864-A314-B3DE8284697D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC4D794-EB16-4864-A314-B3DE8284697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC4D794-EB16-4864-A314-B3DE8284697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC4D794-EB16-4864-A314-B3DE8284697D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF4FE854-A6F0-40EC-B9FA-91F1F889FBDF}
+	EndGlobalSection
+EndGlobal
