@@ -1,0 +1,9 @@
+﻿namespace Examen_Lenguajes1_.API.Constants
+{
+    public static class RolesConstant
+    {
+        public const string ADMIN = nameof(ADMIN);
+        public const string HR = nameof(HR);
+        public const string USER = nameof(USER);
+    }
+}

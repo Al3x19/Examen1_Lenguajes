@@ -1,0 +1,26 @@
+[
+  {
+    "id": "549d0073-f2bf-4b47-9fd6-7cc335bd6c3d",
+    "type": "request",
+    "reason": "Vacation",
+    "state": "approved",
+    "submitdate": "2024-10-01",
+    "enddate": "2024-10-15"
+  },
+  {
+    "id": "ba0c92ee-d854-4dde-a1b9-f1fb13cbc1f2",
+    "type": "request",
+    "reason": "Medical",
+    "state": "pending",
+    "submitdate": "2024-10-05",
+    "enddate": "2024-10-10"
+  },
+  {
+    "id": "6e8fce14-757a-4570-9cfe-fe41a890fb7f",
+    "type": "request",
+    "reason": "Personal",
+    "state": "denied",
+    "submitdate": "2024-09-20",
+    "enddate": "2024-09-25"
+  }
+]

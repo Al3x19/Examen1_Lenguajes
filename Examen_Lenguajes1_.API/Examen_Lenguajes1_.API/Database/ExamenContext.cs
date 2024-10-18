@@ -1,17 +1,17 @@
-﻿using BlogUNAH.API.Database.Configuration;
-using BlogUNAH.API.Database.Entities;
-using BlogUNAH.API.Services.Interfaces;
+﻿using Examen_Lenguajes1_.API.Database.Configuration;
+using Examen_Lenguajes1_.API.Database.Entities;
+using Examen_Lenguajes1_.API.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlogUNAH.API.Database
+namespace Examen_Lenguajes1_.API.Database
 {
-    public class BlogUNAHContext : IdentityDbContext<IdentityUser> 
+    public class Examen_Lenguajes1_Context : IdentityDbContext<EmployeeEntity> 
     {
         private readonly IAuditService _auditService;
 
-        public BlogUNAHContext(
+        public Examen_Lenguajes1_Context(
             DbContextOptions options, 
             IAuditService auditService
             ) : base(options)
@@ -23,13 +23,10 @@ namespace BlogUNAH.API.Database
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.UseCollation("SQL_Latin1_General_CP1_CI_AS");
-            modelBuilder.Entity<TagEntity>()
-            .Property(e => e.Name)
-            .UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             modelBuilder.HasDefaultSchema("security");
 
-            modelBuilder.Entity<IdentityUser>().ToTable("users");
+            modelBuilder.Entity<EmployeeEntity>().ToTable("employees");
             modelBuilder.Entity<IdentityRole>().ToTable("roles");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("users_roles");
             modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("users_claims");
@@ -37,13 +34,8 @@ namespace BlogUNAH.API.Database
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("roles_claims");
             modelBuilder.Entity<IdentityUserToken<string>>().ToTable("users_tokens");
 
-            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
-            modelBuilder.ApplyConfiguration(new PostConfiguration());
-            modelBuilder.ApplyConfiguration(new PostTagConfiguration());
-            modelBuilder.ApplyConfiguration(new TagConfiguration());
+            modelBuilder.ApplyConfiguration(new RequestConfiguration());
 
-
-            // set FKS OnRestrict
 
             var eTypes = modelBuilder.Model.GetEntityTypes();
             foreach (var Type in eTypes)
@@ -87,9 +79,7 @@ namespace BlogUNAH.API.Database
             return base.SaveChangesAsync(cancellationToken);
         }
 
-        public DbSet<CategoryEntity> Categories { get; set; }
-        public DbSet<TagEntity> Tags { get; set; }
-        public DbSet<PostEntity> Posts { get; set; }
-        public DbSet<PostTagEntity> PostsTags { get; set; }
+        public DbSet<RequestEntity> Requests { get; set; }
+
     }
 }
